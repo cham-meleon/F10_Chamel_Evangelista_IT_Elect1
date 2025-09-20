@@ -1,4 +1,3 @@
-// CounterApp.js
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
@@ -9,32 +8,23 @@ export default function CounterApp() {
     <View style={styles.container}>
       <Text style={styles.title}>Counter App</Text>
       <Text style={styles.counter}>{count}</Text>
-      <View style={styles.buttonRow}>
-        <Button title="➕ Increment" onPress={() => setCount(count + 1)} />
-        <Button title="➖ Decrement" onPress={() => setCount(count - 1)} />
-      </View>
+      <Button title="INCREMENT" onPress={() => setCount(count + 1)} />
+      <Button title="DECREMENT" onPress={() => setCount(count - 1)} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
     alignItems: 'center',
-    justifyContent: 'center',
+    padding: 20
   },
   title: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    marginBottom: 10,
+    fontSize: 24,
+    fontWeight: 'bold'
   },
   counter: {
-    fontSize: 28,
-    marginVertical: 15,
-    color: '#333',
-  },
-  buttonRow: {
-    flexDirection: 'row',
-    gap: 10,
-  },
+    fontSize: 48,
+    marginVertical: 10
+  }
 });
